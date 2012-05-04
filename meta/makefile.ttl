@@ -6,8 +6,8 @@
 	:perl_version_from _:main;
 	:version_from _:main;
 	:readme_from _:main;
-	:requires "strict", "base", "Plack", "Crypt::X509", "DateTime", "MIME::Base64", "Gepok";
-	:test_requires "Test::More 0.61".
+	:requires "strict", "base", "Plack", "Crypt::X509", "DateTime", "MIME::Base64", "Gepok 0.20";
+	:test_requires "Test::More 0.61", "Net::SSL", "Net::SSLeay".
 
 _:main <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Plack/Middleware/GepokX/ModSSL.pm".
 
