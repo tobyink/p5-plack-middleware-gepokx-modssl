@@ -1,0 +1,13 @@
+# This file provides instructions for packaging.
+
+@prefix : <http://purl.org/NET/cpan-uri/terms#> .
+
+<http://purl.org/NET/cpan-uri/dist/Plack-Middleware-GepokX-ModSSL/project>
+	:perl_version_from _:main;
+	:version_from _:main;
+	:readme_from _:main;
+	:requires "strict", "base", "Plack", "Crypt::X509", "DateTime", "MIME::Base64", "Gepok";
+	:test_requires "Test::More 0.61".
+
+_:main <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Plack/Middleware/GepokX/ModSSL.pm".
+
