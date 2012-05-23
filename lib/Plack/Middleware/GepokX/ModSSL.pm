@@ -1,14 +1,20 @@
 package Plack::Middleware::GepokX::ModSSL;
 
 use 5.010;
-use strict;
+use strict 0 qw(vars subs refs);
 
-use base qw(Plack::Middleware);
+use base 0 qw(Plack::Middleware);
 use Plack::Util::Accessor qw(vars);
 
 use Crypt::X509 0 qw(); # ridiculous exports
-use DateTime;
-use MIME::Base64 qw(decode_base64);
+use DateTime 0 qw();
+use MIME::Base64 0 qw(decode_base64);
+use Net::SSLeay 0 qw();
+
+my $__use_these_too = q(
+use Gepok 0.20 qw();
+use Plack 0 qw();
+);
 
 BEGIN {
 	$Plack::Middleware::GepokX::ModSSL::AUTHORITY = 'cpan:TOBYINK';
@@ -133,7 +139,7 @@ Plack::Middleware::GepokX::ModSSL - roughly compatible with Plack::Middleware::A
 
 This middleware attempts to recreate for Gepok, some
 of the SSL information which Apache's mod_ssl would
-put into the environment.
+put into the Plack C<< $env >> hashref.
 
 It supports the following variables, as defined by
 L<http://httpd.apache.org/docs/2.0/mod/mod_ssl.html>.
@@ -227,7 +233,7 @@ L<http://rt.cpan.org/Dist/Display.html?Queue=Plack-Middleware-GepokX-ModSSL>.
 =head1 SEE ALSO
 
 L<Plack>,
-L<Gepok>,
+L<Gepok> (version 0.20 required),
 L<Plack::Middleware::Apache2::ModSSL>.
 
 L<http://httpd.apache.org/docs/2.0/mod/mod_ssl.html>.
