@@ -18,7 +18,7 @@ use Plack 0 qw();
 
 BEGIN {
 	$Plack::Middleware::GepokX::ModSSL::AUTHORITY = 'cpan:TOBYINK';
-	$Plack::Middleware::GepokX::ModSSL::VERSION   = '0.001';
+	$Plack::Middleware::GepokX::ModSSL::VERSION   = '0.002';
 }
 
 my %PROTO = (
