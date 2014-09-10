@@ -1,0 +1,14 @@
+@prefix deps:  <http://ontologi.es/doap-deps#> .
+
+<http://purl.org/NET/cpan-uri/dist/Plack-Middleware-GepokX-ModSSL/project>
+	deps:runtime-requirement         [ deps:on "base 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "Crypt::X509 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "DateTime 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "Gepok 0.20"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "MIME::Base64 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "Net::SSLeay 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "Plack 0"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "strict 0"^^deps:CpanId ];
+	deps:test-requirement            [ deps:on "Test::More 0.61"^^deps:CpanId ];
+	deps:test-requirement            [ deps:on "Net::SSL"^^deps:CpanId ].
+
